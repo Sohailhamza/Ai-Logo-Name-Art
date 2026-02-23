@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/promptFragment">
+
+    <fragment
+        android:id="@+id/promptFragment"
+        android:name="com.example.ailogomaker.PromptFragment">
+        <action
+            android:id="@+id/toStyle"
+            app:destination="@id/styleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/styleFragment"
+        android:name="com.ailogomaker.StyleFragment">
+        <action
+            android:id="@+id/toColor"
+            app:destination="@id/colorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/colorFragment"
+        android:name="com.ailogomaker.ColorFragment">
+        <action
+            android:id="@+id/toLoading"
+            app:destination="@id/loadingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.ailogomaker.LoadingFragment" />
+</navigation>

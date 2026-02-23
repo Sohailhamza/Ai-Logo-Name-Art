@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="8dp"
+                    android:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/choose_type"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="12dp"
+            android:hint="@string/search_hint"
+            android:paddingStart="16dp"
+            android:layout_marginHorizontal="25dp"
+            android:textColor="@color/white"
+            android:textColorHint="#8E8E93" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/img_ai_logo"
+                       />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip_selected"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/img_ai_logo"
+                       />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/logos"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp">
+<!--                    <ImageView-->
+<!--                        android:layout_width="18dp"-->
+<!--                        android:layout_height="18dp"-->
+<!--                        android:src="@drawable/ic_card"-->
+<!--                        app:tint="#FFFFFF"/>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/business_card"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_pink"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="@string/all"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_pill_pink"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="@string/business"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+<!--        <GridLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:columnCount="2"-->
+<!--            android:paddingHorizontal="15dp"-->
+<!--            android:useDefaultMargins="true">-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_columnWeight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="5dp">&ndash;&gt;-->
+<!--&lt;!&ndash;                <com.google.android.material.card.MaterialCardView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="180dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:cardCornerRadius="16dp">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="match_parent">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <ImageView&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            android:scaleType="centerCrop"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            android:src="@drawable/img_sample_logo" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="24dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="24dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_margin="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:src="@drawable/ic_heart_unselected" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;                </com.google.android.material.card.MaterialCardView>&ndash;&gt;-->
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Modern Gradient Logo"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="#FFFFFF"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="13sp" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Business"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="#8E8E93"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="11sp" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+<!--        </GridLayout>-->
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
