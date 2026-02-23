@@ -1,7 +1,6 @@
 package com.example.ailogomaker.mainscreen
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -70,11 +69,8 @@ class MainScreen : AppCompatActivity() {
 
         // 2. Click Listener
         btnAiLogo.setOnClickListener {
-            val fragment = AiLogoFragment()
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, fragment)
-            transaction.addToBackStack(null)
-            transaction.commit()
+            val intent = Intent(this, AiLogoActivity::class.java)
+            startActivity(intent)
         }
 
     }

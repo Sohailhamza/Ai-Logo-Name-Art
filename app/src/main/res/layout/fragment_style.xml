@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#050505"
-    android:padding="20dp">
+    android:background="@drawable/splash_screen_bg"
+    android:padding="20dp"
+    android:clickable="true"
+    android:focusable="true">
 
     <TextView
         android:id="@+id/tvStepCount"
@@ -30,118 +32,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvStepCount" />
 
+    <ProgressBar
+        android:id="@+id/stepProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:progress="66"
+        android:progressDrawable="@drawable/custom_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@id/btnContinue"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+        app:layout_constraintTop_toBottomOf="@id/stepProgress"> <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alignmentMode="alignMargins"
-            android:columnCount="3"
-            android:rowCount="2">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMonogram"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#1A1A1A"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#33FFFFFF"
+            app:strokeWidth="1dp">
+        </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardMonogram"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="#1A1A1A"
-                app:cardCornerRadius="16dp"
-                app:strokeColor="#33FFFFFF"
-                app:strokeWidth="1dp">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAbstract"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#1A1A1A"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#33FFFFFF"
+            app:strokeWidth="1dp">
+        </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card3D"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#1A1A1A"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#33FFFFFF"
+            app:strokeWidth="1dp">
+        </com.google.android.material.card.MaterialCardView>
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@android:drawable/ic_menu_edit" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Monogram"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardAbstract"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="#1A1A1A"
-                app:cardCornerRadius="16dp"
-                app:strokeColor="#33FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@android:drawable/ic_menu_gallery" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Abstract"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card3D"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="#1A1A1A"
-                app:cardCornerRadius="16dp"
-                app:strokeColor="#33FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@android:drawable/ic_menu_view" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="3D Logo"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-        </GridLayout>
+    </GridLayout>
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton

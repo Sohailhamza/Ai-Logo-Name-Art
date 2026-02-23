@@ -30,6 +30,10 @@
             android:name=".mainscreen.MainScreen"
             android:exported="false" />
         <activity
+            android:name=".mainscreen.AiLogoActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
             android:name=".onboarding.OnboardingActivity"
             android:exported="false" />
         <activity

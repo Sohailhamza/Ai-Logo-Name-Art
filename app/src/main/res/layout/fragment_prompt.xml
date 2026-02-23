@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/btnBackPrompt"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Graphic Logo"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnBackPrompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnBackPrompt" />
+
+    <ProgressBar
+        android:id="@+id/stepProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:progress="33"
+        android:progressDrawable="@drawable/custom_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/labelPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Enter your prompt"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepProgress" />
+
+    <TextView
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:textColor="#BAB9B9"
+        app:layout_constraintBottom_toBottomOf="@id/labelPrompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/labelPrompt" />
+
+    <EditText
+        android:id="@+id/etPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/prompt_input_bg"
+        android:gravity="top"
+        android:hint="Describe your Idea.."
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#606060"
+        app:layout_constraintTop_toBottomOf="@id/labelPrompt" />
+
+    <TextView
+        android:id="@+id/tvCharCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="0/500"
+        android:textColor="#606060"
+        app:layout_constraintBottom_toBottomOf="@id/etPrompt"
+        app:layout_constraintEnd_toEndOf="@id/etPrompt" />
+
+    <TextView
+        android:id="@+id/labelIdeas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Try one of these ideas!"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPrompt" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIdeas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        app:layout_constraintTop_toBottomOf="@id/labelIdeas" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_bg"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
